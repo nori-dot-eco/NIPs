@@ -98,7 +98,7 @@ For example:
 --> 60 unrestricted NORI, 40 restricted NORI
 --> audit says only 70 TCO2e were removed (30 CRC deficit)
 --> 10 unrestricted NORI transfered to the supplier account, remaining 30 restricted NORI are transferred to the Risk Mitigation Account(NIP-???)[]
---> 30 restricted NORI used to retire 30 additional CRCs to cover the deficit queuing the tokens in the Market contract
+--> 30 restricted NORI used to retire 30 additional CRCs of Tier 1 (`estimationTier=1`) to cover the deficit queuing the tokens in the Market contract
 
 100 CRCs
 --> 60 unrestricted NORI, 40 restricted NORI
