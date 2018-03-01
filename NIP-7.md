@@ -1,25 +1,15 @@
----------------------
 
 ## Risk Mitigation Balance NIP-???
-  NMP: NIP-7
   
 ## Preamble
-
-  NIP: NIP-7
-
-  Title: Risk Mitigation Balance
-
-  Author: Aldyen Donnelly, Jaycen Horton, Paul Carduner
-
-  Type: Standard Track
-
-  Categroy: Core
-
-  Status: Draft
-
-  Created: February 28, 2018
-
-  Replaces: N/A
+    NIP: NIP-7
+    Title: Risk Mitigation Balance
+    Author: Aldyen Donnelly, Jaycen Horton, Paul Carduner
+    Type: Standard Track
+    Categroy: Core
+    Status: Draft
+    Created: February 28, 2018
+    Replaces: N/A
 
 ## Simple Summary
 The Risk Mitigation contract is how Nori upholds its commitment to the buyers so that each retires 1 TCO2e (+/-10%) (CRC)[NMP-2]
