@@ -1,5 +1,3 @@
-# NIP-??
-
 ## Preamble
 
   NIP: NIP-???
@@ -92,6 +90,8 @@ _Note_: The only time the purchase of a CRC does not result in that CRC
 being retired is when the purchase is performed by the market risk mitigation
 account.
 
+
+### Supplier's Perspective Examples
 For example:
 
 100 CRCs
@@ -103,8 +103,8 @@ For example:
 100 CRCs
 --> 60 unrestricted NORI, 40 restricted NORI
 --> audit says only 50 TCO2e were removed (50 CRC deficit)
---> the 40 restricted NORI are transferred to the Risk Mitigation Account(NIP-???)[] used to retire 40 additional CRCs to cover the deficit
---> additional 10 CRCs of Tier 1 (`estimationTier=1`) retired from the risk mitigation account
+--> the 40 restricted NORI are transferred to the Risk Mitigation Balance(NIP-???)[] used to retire 40 additional CRCs to cover the deficit
+--> additional 10 CRCs of Tier 1 (`estimationTier=1`) retired from the Risk Mitigation Balance
 
 100 CRCs
 --> 60 unrestricted NORI, 40 restricted NORI
@@ -112,7 +112,23 @@ For example:
 --> the 40 restricted NORI are transferred to the supplier's account
 --> 20 CRCs are minted of Tier 1 (`estimationTier=1`) and transfered to the Suppliers account
 
+100 CRCs
+--> 50 unrestricted NORI, 50 restricted NORI
+
+
 _Note_: These are "strawdog discountrates. We need to talk about different estimation Tiers, what
 each means in terms of estimation error/uncertainty and relate these
 different verification procedures to the CRC Quality rating and unrestricted/restricted token ratios.
 I need to include other folks in such a discussion.
+
+
+### Buyer's Perspective Examples
+For example:
+
+100 CRCs
+--> 50 unrestricted NORI, 50 restricted NORI
+--> audit says only 50 TCO2e were removed (50 CRC deficit)
+--> 50 unrestricted NORI transfered to the supplier account, remaining 50 restricted NORI are transferred to the Risk Mitigation Balance(NIP-???)[]
+--> 50 restricted NORI used to retire 50 additional CRCs of Tier 1 (`estimationTier=1`) to cover the deficit queuing the tokens in the Market contract
+--> 50 CRCs in the Buyer's account are changed from Tier 1 to Tier 0
+--> the purchased CRCs by the restricted account are transfered to the buyer
