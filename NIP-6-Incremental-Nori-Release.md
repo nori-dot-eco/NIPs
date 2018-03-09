@@ -1,8 +1,8 @@
 ## Preamble
 
-  NIP: NIP-???
+  NIP: NIP-6
 
-  Title: CRC and NORI token transfers for multi-tiered CRCs
+  Title: Incremental Release Process of NORI for CRCs sold
 
   Author: Aldyen Donnelly
 
@@ -16,6 +16,16 @@
 
   Replaces: N/A
 
+## Simple Summary
+This NIP describes the process by which buyers and suppliers receive their NORI and CRCs after buying/selling them in the [FIFO CRC Market]()
+
+## Abstract
+When a supplier lists their CRCs for sale in the marketplace, the CRC's `category` (defined in [NIP-8](https://github.com/nori-dot-eco/NIPs/blob/NIP-8-Carbon-Removal-Claim/NIP8_CarbonRemovalClaim.md) ) determines the rate at which they will receive the NORI tokens that were used to purchase them.  
+
+## Motivation
+There needs to exist clarity in how a supplier receives NORI after selling their CRCs, and how a buyer receives CRCs upon purchase using NORI. Since there are estimation errors that occur when verifying a claim, these restrictions allow for incremental releases based on the `category` a CRC is first verified at. Since this means there is always the possiblity of a defecit amount of carbon having been removed from the atmosphere versus the amount of CRCs in existence, this, along with subsequent NIPs such as those defined in the [Risk Mitigation Balance]() NIP, seeks to clarify actions taken when such occurs.
+
+## Specification
 
 ### Initial Tiered CRC and NORI token transfer
 
@@ -90,6 +100,14 @@ _Note_: The only time the purchase of a CRC does not result in that CRC
 being retired is when the purchase is performed by the market risk mitigation
 account.
 
+## Rationale
+Allowing NORI to be released to the supplier in this manner allows for Nori to react more flexibly and adapt to estimation errors.
+
+## Backwards Compatibility
+To be completed
+
+## Test Cases
+To be completed. Test cases should be written to prove the following scenarios:
 
 ### Supplier's Perspective Examples
 For example:
@@ -98,19 +116,19 @@ For example:
 --> 60 unrestricted NORI, 40 restricted NORI
 --> audit says only 70 TCO2e were removed (30 CRC deficit)
 --> 10 unrestricted NORI transfered to the supplier account, remaining 30 restricted NORI are transferred to the Risk Mitigation Account(NIP-???)[]
---> 30 restricted NORI used to retire 30 additional CRCs of Tier 1 (`estimationTier=1`) to cover the deficit queuing the tokens in the Market contract
+--> 30 restricted NORI used to retire 30 additional CRCs of Tier 1 (`category=1`) to cover the deficit queuing the tokens in the Market contract
 
 100 CRCs
 --> 60 unrestricted NORI, 40 restricted NORI
 --> audit says only 50 TCO2e were removed (50 CRC deficit)
---> the 40 restricted NORI are transferred to the Risk Mitigation Balance(NIP-???)[] used to retire 40 additional CRCs to cover the deficit
---> additional 10 CRCs of Tier 1 (`estimationTier=1`) retired from the Risk Mitigation Balance
+--> the 40 restricted NORI are transferred to the [Risk Mitigation Balance]() used to retire 40 additional CRCs to cover the deficit
+--> additional 10 CRCs of Tier 1 (`category=1`) retired from the Risk Mitigation Balance
 
 100 CRCs
 --> 60 unrestricted NORI, 40 restricted NORI
 --> audit says 120 were removed (20 CRC surplus)
 --> the 40 restricted NORI are transferred to the supplier's account
---> 20 CRCs are minted of Tier 1 (`estimationTier=1`) and transfered to the Suppliers account
+--> 20 CRCs are minted of Tier 1 (`category=1`) and transfered to the Suppliers account
 
 100 CRCs
 --> 50 unrestricted NORI, 50 restricted NORI
@@ -128,7 +146,13 @@ For example:
 100 CRCs
 --> 50 unrestricted NORI, 50 restricted NORI
 --> audit says only 50 TCO2e were removed (50 CRC deficit)
---> 50 unrestricted NORI transfered to the supplier account, remaining 50 restricted NORI are transferred to the Risk Mitigation Balance(NIP-???)[]
---> 50 restricted NORI used to retire 50 additional CRCs of Tier 1 (`estimationTier=1`) to cover the deficit queuing the tokens in the Market contract
+--> 50 unrestricted NORI transfered to the supplier account, remaining 50 restricted NORI are transferred to the [Risk Mitigation Balance]()
+--> 50 restricted NORI used to retire 50 additional CRCs of Tier 1 (`category=1`) to cover the deficit queuing the tokens in the Market contract
 --> 50 CRCs in the Buyer's account are changed from Tier 1 to Tier 0
 --> the purchased CRCs by the restricted account are transfered to the buyer
+
+## Implementation
+To be completed
+
+## Copyright
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
