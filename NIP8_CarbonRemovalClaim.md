@@ -21,31 +21,37 @@ Participants in the Nori ecosystem can create new CRCs whenever CO2 has been rem
 The CRC leverages Pseudo contract introspection and adds their ability to allow for a `callOperator` function which notifies a contract if it has been made an operator for a CRC.
 
 Following the guidelines set in [NIP-5]() , the CRC leverages its Commodity struct as follows:
+
+The estimation category based on tiers
 ```solidity
 uint64 category;
 ```
-The estimation category based on tiers
+
+A timestamp from the block in which this CRC was minted
 ```solidity
 uint64 timeRegistered;
 ```
-A timestamp from the block in which this CRC was minted
 
+The index or ID of the CRC that created this CRC. This is used when CRCs are split into two new CRCs, each with smaller values. It is set to 0 for brand new CRCs which have never been split. 
 ```solidity
 uint64 parentId;
 ```
-The index or ID of the CRC that created this CRC. This is used when CRCs are split into two new CRCs, each with smaller values. It is set to 0 for brand new CRCs which have never been split. 
+
+This represents the total amount of CO2 claimed to have been removed from the atmosphere. Since it is not feasible to create a new CRC for every TCO2e removed, this field can be used to batch together multiple claims into one.
 ```solidity
 uint64 value;
 ```
-This represents the total amount of CO2 claimed to have been removed from the atmosphere. Since it is not feasible to create a new CRC for every TCO2e removed, this field can be used to batch together multiple claims into one.
+
+This attribute is used to prevent multiple transfers of CRCs. Once a CRC has been transferred once, this attribute is set to true and cannot be transferred again. 
 ```solidity
 bool locked;
 ```
-This attribute is used to prevent multiple transfers of CRCs. Once a CRC has been transferred once, this attribute is set to true and cannot be transferred again. 
-```solidity
-bytes data;
-```
+
 The IPFS/IPLD hash which can be used to look up data associated with a particular CRC
+```solidity
+bytes misc;
+```
+
 
 ### Non-standard CommodityType Specs
 Aside from the standard implementation of a CommoditityType, the following functions require some special logic:
