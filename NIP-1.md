@@ -30,7 +30,13 @@ There are three types of NIP:
      -   **NRC** - application-level standards and conventions, such as report or data standards for Commodities (such as a [CRC]() report whose data is handled externally (such as in IPFS) but does not directly require a change in the smart contract logic itself, extensions to participant identity registry standards, URI schemes, library/package formats, IOT standards or standards relating to devices communicating or interfacing with Nori.
 
 -   An **Informational NIP** describes a Nori design issue, or provides general guidelines or information to the Nori community, but does not propose a new feature. Informational NIPs do not necessarily represent Nori community consensus or a recommendation, so users and implementers are free to ignore Informational NIPs or follow their advice.
+
 -   A **Meta NIP** describes a process surrounding Nori or proposes a change to (or an event in) a process. Process NIPs are like Standards Track NIPs but apply to areas other than the Nori platform itself. They may propose an implementation, but not to Nori's codebase; they often require community consensus; unlike Informational NIPs, they are more than recommendations, and users are typically not free to ignore them. Examples include procedures, guidelines, changes to the decision-making process relating to whitelisting or blacklisting projects or methodologies, and changes to the tools or environment used to interface with Nori APIs in a standard way. Any meta-NIP is also considered a Process NIP.
+
+-   An **Methodology NIP** describe any Nori methodology process related to removing CO2 from the atmosphere. These define how Nori and community can account for the output of a particular methodology process. It does not or should not deal specifically with the process itself, and should instead define standards relating to the output from such. Methodologies can be broken into the following types.
+    -   **Record Keeping**
+    -   **Reporting**
+    -   All Methodology types must define a sub-type referencing the process it is used for. **Sub-Type: I.E. Soil/Direct Air Capture/etc.**
 
 NIP Workflow
 -------------
