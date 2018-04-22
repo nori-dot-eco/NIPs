@@ -240,6 +240,7 @@ History
 This document was derived heavily from [Ethereum's's EIP-1](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md) which in turn was derived from [Bitcoin's BIP-0001](https://github.com/bitcoin/bips/blob/master/bip-0001.mediawiki) written by Amir Taaki which in turn was derived from [Python's PEP-0001](https://www.python.org/dev/peps/pep-0001/). In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use in the Nori Improvement Process, and should not be bothered with ANY technical questions specific to Nori or the NIP processes. Please direct all comments to the NIP editors listed above.
 
 December 8, 2017: First draft
+
 April 21, 2018: Minor revisions to wording and format and the addition of Methodology NIP type
 
 Copyright
