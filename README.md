@@ -7,7 +7,9 @@ Reccomended:
  2. Fork the repository by clicking "Fork" in the top right.
  3. Add your NIP to your fork of the repository. There is a [template NIP here](nip-X.md).
  4. Submit a Pull Request to Nori's [NIPs repository](https://github.com/nori-dot-eco/NIPs).
+ 
 OR:
+
  1. Review [NIP-1](NIP-1.md).
  2. Add your NIP to the github [issues page](https://github.com/nori-dot-eco/NIPs/issues). There is a [template NIP here](nip-X.md).
 
